@@ -7,7 +7,7 @@ import remarkGfm from 'remark-gfm'
 import rehypeRaw from "rehype-raw";
 import uuid from 'react-uuid';
 import { isEmpty } from "lodash-es";
-
+import qccailogo from "../../assets/qccailogo.png";
 import styles from "./Chat.module.css";
 import ESDesigns from "../../assets/ESDesigns.png";
 import CAE from "../../assets/CAE.jfif";
@@ -588,13 +588,13 @@ const Chat = () => {
                         {!messages || messages.length < 1 ? (
                             <Stack className={styles.chatEmptyState}>
                                 <img
-                                    src={ESDesigns}
+                                    src={qccailogo}
                                     className={styles.chatIcon}
                                     aria-hidden="true"
                                 />
 
-                                <h1 className={styles.chatEmptyStateTitle}> ESDesigns GPT 3.5 Turbo </h1>
-                                <h2 className={styles.chatEmptyStateSubtitle}> What can I help you learn today? </h2>
+                                <h1 className={styles.chatEmptyStateTitle}> QCC Ultra AI Assistant </h1>
+                                <h2 className={styles.chatEmptyStateSubtitle}> How can I help you with Blackboard Ultra? </h2>
                             </Stack>
                         ) : (
                             <div className={styles.chatMessageStream} style={{ marginBottom: isLoading ? "40px" : "0px"}} role="log">
